@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Погода</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="clear">
+  <main class="app">
+    <header class="top">
+      <h1>Погода</h1>
+      <button id="unit-btn" class="unit-btn" type="button" title="Сменить единицы">°C</button>
+    </header>
+
+    <form id="search-form" class="search" autocomplete="off">
+      <input id="city-input" type="text" placeholder="Введите город, например Астана" required>
+      <button type="submit">Найти</button>
+    </form>
+
+    <p id="status" class="status" hidden></p>
+
+    <section id="current" class="card current" hidden>
+      <h2 id="city-name"></h2>
+      <div class="current-main">
+        <span id="icon" class="icon"></span>
+        <span id="temp" class="temp"></span>
+      </div>
+      <p id="description" class="description"></p>
+      <ul class="details">
+        <li>Ощущается: <b id="feels"></b></li>
+        <li>Влажность: <b id="humidity"></b></li>
+        <li>Ветер: <b id="wind"></b></li>
+      </ul>
+    </section>
+
+    <section id="forecast" class="forecast" hidden></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
